@@ -76,9 +76,14 @@
             </div>
           </div>
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h1 class="panel-title" >Ingredients</h1>
+        <div class="panel panel-primary my-5">
+          <div class="row">
+            <div class="panel-heading col-md-11">
+              <h1 class="panel-title" >Ingredients</h1>
+            </div>
+            <div class="col-md-1">
+              <a class="btn btn-primary" href="#" th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">View</a>
+            </div>
           </div>
           <div class="panel-body">
             <div class="row">

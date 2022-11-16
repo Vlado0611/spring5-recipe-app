@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Recipe Home</title>
-    <link rel="stylesheet"
-          th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 
 </head>
 <body>
@@ -23,6 +22,8 @@
                                 <th>ID</th>
                                 <th>Description</th>
                                 <th>View</th>
+                                <th>Update</th>
+                                <th>Delete</th>
                             </thead>
                             <!--<tr th:remove="all">
                                 <td th:text="${recipe.id}">123</td>
@@ -35,7 +36,10 @@
                             <tr th:each="recipe : ${recipes}">
                                 <td th:text="${recipe.id}">123</td>
                                 <td th:text="${recipe.description}">Tasty goodness</td>
-                                <td><a th:href="@{'/recipe/show/' + ${recipe.id}}">View</a></td>
+                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/show'}">View</a></td>
+                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/update'}">Update</a></td>
+                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/delete'}">Delete</a></td>
+
                             </tr>
                         </table>
 
