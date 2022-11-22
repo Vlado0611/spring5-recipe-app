@@ -88,7 +88,7 @@ class RecipeServiceImplTest {
             Recipe recipeReturned = recipeService.findById(1l);
         });
 
-        assertTrue(exception.getMessage().equals("Recipe Not Found"));
+        assertTrue(exception.getMessage().equals("Recipe Not Found for ID value: " + 1l));
 
     }
 }
