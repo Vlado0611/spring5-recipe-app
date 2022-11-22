@@ -26,7 +26,7 @@ public class Recipe {
     private Byte[] image;
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe", orphanRemoval = true)
     private Set<Ingredient> ingredients = new HashSet<>();
     @Enumerated(value = EnumType.STRING)
     private Difficulty difficulty;
